@@ -1,7 +1,7 @@
 function Account() {
   return (
     <>
-      This is the accounts page
+      This is the home page
     </>
   );
 }
