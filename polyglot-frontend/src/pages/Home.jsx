@@ -1,21 +1,25 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+import authBeforeRender from "../helpers/authBeforeRender";
 
 function Home() {
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const status = authBeforeRender();
 
-    console.log("authCookie: ", document.cookie);
-    
-    fetch("http://localhost:1234/")
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-
+    if (status === 1) {
+      navigate("/register");
+    }
   }, []);
 
+  
+
   return (
-    <>
-      This is the home page
-    </>
+    <div>
+      
+    </div>
   );  
 }
 

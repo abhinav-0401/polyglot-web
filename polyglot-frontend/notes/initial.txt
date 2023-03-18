@@ -1,0 +1,10 @@
+First of all, I need to display a registration screen with: name and the technex id.
+
+Once that is done, the user is redirected to a log in page, and then logs in, with the data being stored in the document.cookie field.
+
+Once the user logs in, he/she is taken to the problems page, where the problems are displayed.
+Along with a problem are fields for submition of his/her code, as well as specifying what languages are allowed.
+
+These languages allowed are stored in a special database, and an admin user can remove what languages are allowed in each subsequent round.
+
+Once the submission is made, a counter is increased for the corresponding language, which is displayed on a separate "stats" page.
