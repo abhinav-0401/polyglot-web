@@ -19,6 +19,9 @@ function Login() {
     switch (status.status) {
       case "ok":
         console.log(status.user);
+        console.log(document.cookie.concat(`;tx_id=${status.user.tx_id}`))
+        document.cookie = `tx_id=${status.user.tx_id}`;
+
         navigate("/");
         break;
       case "Invalid technex id":
@@ -51,6 +54,8 @@ function Login() {
     <>
       <input type="text" placeholder="Technex ID"  value={txId} onChange={(event) => setTxId(event.target.value)} />
       <button onClick={handleLogin}> Log In </button>
+
+      Haven't registered with your Technex ID yet? <button onClick={() => navigate("/register")}> Register </button>
     </>
   );
 }

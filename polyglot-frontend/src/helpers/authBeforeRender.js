@@ -6,7 +6,7 @@ function authBeforeRender() {
   console.log("authCookie: ", document.cookie.split(";"));
   const txId = document.cookie
     .split(";")
-    .find(cookie => (cookie.slice(0, 5) === "tx_id"));
+    .find(cookie => (cookie.slice(0, 6) === " tx_id"));
 
   if (!txId) {
     return 1;
