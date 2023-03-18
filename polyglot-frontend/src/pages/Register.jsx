@@ -59,6 +59,8 @@ function Register() {
       <input type="text" placeholder="Technex ID" value={txId} onChange={(event) => setTxId(event.target.value)} />
 
       <button onClick={handleRegistration}> Register </button>
+
+      Already registered? <button onClick={() => navigate("/login")}> Login </button>
     </div>
   );
 }
